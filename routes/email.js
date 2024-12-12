@@ -23,10 +23,9 @@ export const sendEmail = async (req, res) => {
       subject: "Purple Haze Media Pvt, Ltd. - Contact Us",
       html: `
         <h2>Contact Information</h2>
-        <p><strong>Name:</strong> ${body.name}</p>
+        <p><strong>Name:</strong> ${body.firstName + " " + body.lastName}</p>
         <p><strong>Email:</strong> ${body.email}</p>
         <p><strong>Phone:</strong> ${body.phone}</p>
-        <p><strong>Company:</strong> ${body.company}</p>
         <h2>Message</h2>
         <p>${body.message.replace(/\n/g, "<br>")}</p>
       `,
